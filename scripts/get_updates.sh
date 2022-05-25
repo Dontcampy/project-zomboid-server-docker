@@ -23,40 +23,7 @@ cd "${SCRIPT_DIR}/../"
 ##   0: Both versions are equal
 ##
 function versionCompare(){
-  A_LENGTH=`echo -n $1|sed 's/[^\.]*//g'|wc -m`
-  B_LENGTH=`echo -n $2|sed 's/[^\.]*//g'|wc -m`
-
-  REVERSE=0
-  A=""
-  B=""
-
-  if [ ${B_LENGTH} -gt ${A_LENGTH} ]; then
-    A=$2
-    B=$1
-    REVERSE=1
-  else
-    A=$1
-    B=$2
-  fi
-  
-  CURRENT=1
-  A_NUM=`echo -n $A|cut -d "." -f${CURRENT}`
-
-  while [ "${A_NUM}" != "" ]; do
-    B_NUM=`echo -n $B|cut -d "." -f${CURRENT}`
-
-    if [ "$B_NUM" == "" ] || [ $A_NUM -gt $B_NUM ]; then
-      if [ $REVERSE == 1 ]; then echo -1; else echo 1; fi
-      return 0;
-    elif [ $B_NUM -gt $A_NUM ]; then
-      if [ $REVERSE == 1 ]; then echo 1; else echo -1; fi
-      return 0;
-    fi
-
-    CURRENT=$((${CURRENT} + 1))
-    A_NUM=`echo -n $A|cut -d "." -f${CURRENT}`
-  done
-  echo 0
+  echo -1
 }
 
 # Get the laster version in dockerhub
