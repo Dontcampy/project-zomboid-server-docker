@@ -7,7 +7,7 @@
 ##                                            ##
 ########################333333##################
 
-DOCKER_IMAGE="danixu86/project-zomboid-dedicated-server"
+DOCKER_IMAGE="dont39/project-zomboid-dedicated-server"
 PZ_URL="https://theindiestone.com/forums/index.php?/forum/35-pz-updates/"
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
