@@ -3,7 +3,7 @@
 ###########################################################
 FROM cm2network/steamcmd:root
 
-LABEL maintainer="daniel.carrasco@electrosoftcloud.com"
+LABEL maintainer="dontcampy@gmail.com"
 
 ENV STEAMAPPID 380870
 ENV STEAMAPP pz
