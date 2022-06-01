@@ -8,7 +8,6 @@ LABEL maintainer="dontcampy@gmail.com"
 ENV STEAMAPPID 380870
 ENV STEAMAPP pz
 ENV STEAMAPPDIR "${HOMEDIR}/${STEAMAPP}-dedicated"
-ENV LANG C.UTF-8
 
 # Install required packages
 RUN apt-get update \
